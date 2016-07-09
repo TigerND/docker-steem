@@ -3,7 +3,6 @@
 ### Prerequisites
 
 Install the most recent version of the Docker Engine for your platform using the official Docker releases, which can also be installed using:
-
 ```
 wget -qO- https://get.docker.com/ | sh
 ```
@@ -11,7 +10,6 @@ wget -qO- https://get.docker.com/ | sh
 ### Quick Start
 
 Download an image with Steem wallet software from [DockerHub](http://bit.ly/29G1mvu)
-
 ```sh
 docker pull teego/steem_wallet
 ```
@@ -64,3 +62,7 @@ You can then use the `--volumes-from` flag to mount the a data volume.
 ```sh
 docker run --name steem_wallet -p 8090:8090 --volumes-from steem_blockchain -v ~/.steem/witness_node_data_dir/config.ini:/witness_node_data_dir/config.ini teego/steem_wallet
 ```
+
+### Sources
+
+Dockerfiles are available on [GitHub](http://bit.ly/29r0Izd)
