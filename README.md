@@ -9,7 +9,7 @@ wget -qO- https://get.docker.com/ | sh
 
 ### Quick Start
 
-Download an image with Steem wallet software from [DockerHub](http://bit.ly/29G1mvu)
+Download an image with Steem wallet software from [DockerHub](https://hub.docker.com/r/teego/steem_wallet/)
 ```sh
 docker pull teego/steem_wallet
 ```
@@ -48,7 +48,7 @@ docker exec -it steem_wallet /root/steem/programs/cli_wallet/cli_wallet
 
 ### Preloaded blockchain
 
-Download an image with preloaded blockchain from [DockerHub](http://bit.ly/29EoJs9)
+Download an image with preloaded blockchain from [DockerHub](https://hub.docker.com/r/teego/steem_blockchain/)
 ```sh
 docker pull teego/steem_blockchain
 ```
@@ -65,4 +65,4 @@ docker run --name steem_wallet -p 8090:8090 --volumes-from steem_blockchain -v ~
 
 ### Sources
 
-Dockerfiles are available on [GitHub](http://bit.ly/29r0Izd)
+Dockerfiles are available on [GitHub](https://github.com/TigerND/docker-steem)
