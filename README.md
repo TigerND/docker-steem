@@ -2,10 +2,7 @@
 
 ### Prerequisites
 
-Install the most recent version of the Docker Engine for your platform using the official Docker releases, which can also be installed using:
-```
-wget -qO- https://get.docker.com/ | sh
-```
+Please see [the Docker installation documentation](https://docs.docker.com/engine/installation/) for details on how to install or upgrade your Docker daemon.
 
 ### Quick Start
 

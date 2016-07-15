@@ -4,29 +4,18 @@ MAINTAINER Aleksandr Zykov <tiger@mano.email>
 
 RUN cd /root ;\
     pwd &&\
-    git clone https://github.com/bitcoin/secp256k1 &&\
-    ( \
-      cd secp256k1 ;\
-      ( \
-        ./autogen.sh &&\
-        ./configure &&\
-        make &&\
-        ./tests \
-      ) \
-    )
-    
-RUN cd /root ;\
-    pwd &&\
-    git clone https://github.com/steemit/steem &&\
+    git clone https://github.com/steemit/steem.git &&\
     ( \
       cd steem ;\
       ( \
+        git checkout v0.9.0rc2 &&\
         git submodule update --init --recursive &&\
         cmake -DENABLE_CONTENT_PATCHING=OFF -DLOW_MEMORY_NODE=ON CMakeLists.txt &&\
-        make &&\
-        mkdir -p /witness_node_data_dir \
+        make \
       ) \
     )
+
+RUN mkdir -p /witness_node_data_dir
 
 ADD config.ini /witness_node_data_dir
 
