@@ -8,10 +8,10 @@ RUN cd /root ;\
     ( \
       cd steem ;\
       ( \
-        git checkout v0.9.0rc2 &&\
+        git checkout v0.11.0 &&\
         git submodule update --init --recursive &&\
         cmake -DENABLE_CONTENT_PATCHING=OFF -DLOW_MEMORY_NODE=ON CMakeLists.txt &&\
-        make \
+        make install \
       ) \
     )
 
