@@ -10,7 +10,7 @@ RUN cd /root/src ;\
     ( \
       cd steem ;\
       ( \
-        git checkout v0.12.1 &&\
+        git checkout v0.12.2 &&\
         git submodule update --init --recursive &&\
         cmake -DCMAKE_INSTALL_PREFIX=/root/steem -DENABLE_CONTENT_PATCHING=OFF -DLOW_MEMORY_NODE=ON CMakeLists.txt &&\
         make install \

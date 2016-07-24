@@ -10,4 +10,6 @@ ADD config.ini /witness_node_data_dir
 
 EXPOSE 2001 8090
 
+VOLUME ["/witness_node_data_dir"]
+
 CMD ["/usr/local/bin/steemd", "--rpc-endpoint"]
